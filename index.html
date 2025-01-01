@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        nav {
+            background-color: #0047ab;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #87ceeb;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 115, 232, 0.8), rgba(0, 71, 171, 0.8)), url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .hero .btn {
+            padding: 15px 30px;
+            background-color: #ffa500;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #ff8c00;
+        }
+
+        .container {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #1a73e8;
+        }
+
+        .job-listing {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .job-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #0047ab;
+        }
+
+        .job-card p {
+            color: #555;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .job-card .btn {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .job-card .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffa500;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #ff8c00;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #0047ab;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .job-card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .job-card {
+                flex: 1 1 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Job Board</h1>
+        <p>Find your dream job or your next great hire!</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#post-job">Post a Job</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero">
+        <h1>Your Career Awaits</h1>
+        <p>Discover new opportunities or hire the best talent</p>
+        <a href="#jobs" class="btn">Explore Jobs</a>
+    </div>
+    <div class="container">
+        <h2 class="section-title">Featured Jobs</h2>
+        <div class="job-listing">
+            <div class="job-card">
+                <h3>Front-End Developer</h3>
+                <p>Location: Remote</p>
+                <p>Type: Full-Time</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+            <div class="job-card">
+                <h3>Data Scientist</h3>
+                <p>Location: New York, NY</p>
+                <p>Type: Part-Time</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+            <div class="job-card">
+                <h3>UI/UX Designer</h3>
+                <p>Location: San Francisco, CA</p>
+                <p>Type: Contract</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="cta">
+        <a href="#post-job">Post a Job</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 Job Board. All rights reserved.</p>
+    </footer>
+</body>
+</html>
